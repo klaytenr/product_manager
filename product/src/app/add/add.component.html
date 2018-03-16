@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <h4>Create a New Product</h4>
+  <div>
+    <h3 *ngIf='error'>{{error}}</h3>
+    <form (submit)='addNewProduct()'>
+      {{ newProduct | json }}
+      Title: <input type="text" name="title" [(ngModel)]="newProduct.title">
+      Price: <input type="number" name="price" [(ngModel)]="newProduct.price">
+      Image URL: <input type="text" name="image" [(ngModel)]="newProduct.image">
+      <input type="submit" value="Create">
+    </form>
+    <button [routerLink]="['/products']">Cancel</button>
+</div>

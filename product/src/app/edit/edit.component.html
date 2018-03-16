@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h4>Edit Product</h4>
+  <div *ngIf='product'>
+    <h3 *ngIf='error'>{{error}}</h3>
+    <form (submit)='editProduct(product)'>
+      Title: <input type="text" name="title" [(ngModel)]="product.title">
+      Price: <input type="number" name="price" [(ngModel)]="product.price">
+      Image URL: <input type="text" name="image" [(ngModel)]="product.image">
+      <input type="submit" value="Update">
+    </form>
+    <button (click)='deleteProduct(product._id)'>Delete</button>
+  </div>
+</div>

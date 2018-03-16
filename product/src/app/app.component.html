@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="wrapper">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <button [routerLink]="['home']">Home</button>
+  <button [routerLink]="['/products']">Product List</button>
+  <button [routerLink]="['/add']">Product Creation</button>
+  <router-outlet></router-outlet> 
+</div>
+
